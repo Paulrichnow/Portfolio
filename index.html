@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul Richnow Info</title>
+    <link  href="Style.css" rel="stlyesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: auto; 
+        gap: 10px;
+        max-width: 900px; 
+        margin: 0 auto; 
+    }
+
+    .project-grid img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; 
+        
+    }
+    
+    .image-container {
+        border: 5px solid black;
+        border-radius: 10px;
+        padding: 5px; 
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .image-container:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+    </style>
+</head>
+<body>
+    <section id="title">
+        <div class="container col-xxl-8 px-4 pt-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 pt-5">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="./assets/images/New Paul Richnow Image.png" class="d-block mx-lg-auto img-fluid" alt="Image of Paul Richnow holding a ball" width="700" height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Paul Richnow</h1>
+                    <p class="lead">Welcome everyone, this is a page to help you to get to know me a little bit better. Feel free to explore, I hope you enjoy the page and my work. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-me">
+        <div class="my-5">
+            <div class="p-5 text-center bg-body-tertiary">
+                <div class="container pt-4">
+                <h2 class="text-body-emphasis">About Me</h2>
+                <p class="col-lg-8 mx-auto lead">
+                    I am a freshly graduated international student athlete from the University of Tulsa, I was born in New Zealand and am ready to carry on my adventure in America. I have two associates, 
+                    in psychology and Computer Science from Salt Lake Community College, with a bachelor in Computer Science from TU. One of my proudest achievements was captaining and becoming
+                    NJCAA Soccer National Champion and MVP in 2022, along with All-American and United Soccer Coaches First team. Now that my time is over with competitive sport I am excited to get started in my career. 
+                    I am looking to specialise in front-end or full-stack developemnt.
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="project-section">
+        <div class="project-grid">
+            
+            <div class="image-container" onclick="window.open('./assets/pdf/Richnow Resume 2024.pdf', '_blank')">
+                    <img src="./assets/images/Resume Pic.png" alt="Pauls Resume"> 
+                <h2>RESUME</h2>
+
+            </div>
+
+            <div class="image-container" onclick="window.open('./assets/pdf/Paul Richnow Cover Letter.pdf', ' _blank')">
+                <img src="./assets/images/Cover Letter Pic.png" alt="Pauls Cover letter">
+                <h2>COVER LETTER</h2>
+            </div> 
+
+            <div class="image-container" onclick="window.open('https://github.com/true2000/senior-project-group-8', '_blank')">
+                <img src="./assets/images/navBarPhoto.png" alt="Flick Finder">
+                <h2>FlickFinder Repository</h2>
+            </div>
+
+            <div class="image-container" onclick="window.open('https://github.com/Paulrichnow/html-portfolio', '_blank')">
+                <img src="./assets/images/Git hub Image.jpeg" alt="Image 2">
+                <h2>Git Hub Profile</h2>
+            </div>
+
+            <div class="image-container">
+                <img src="./assets/navBarPhoto.png" alt="Image 5">
+            </div>
+
+            <div class="image-container" onclick="window.open('https://www.youtube.com/watch?v=y38zT4Z1Hiw', '_blank')">
+                <img src="./assets/images/New Soccer Pic.png" alt="Image 6">
+                <h2>If You Like Soccer</h2> 
+            </div>
+        </div>
+
+    </section>
+
+    <section id="contact-me">
+        <div class="container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+                <div class="col mb-3">
+                <p class="text-body-secondary">© 2024</p>
+                </div>
+
+                <div class="col mb-3">
+                    
+                </div>
+                
+                <div class="col mb-3">
+                <h5>Contact Me</h5>
+                
+                </div>
+                
+                <div class="col mb-3">
+                <h5>Email</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">richnow.paul@yahoo.co.nz</a></li>
+                    
+                </ul>
+                </div>
+                
+                <div class="col mb-3">
+                <h5>Mobile</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">(385) 371-8383</a></li>
+                    
+                </ul>
+                </div>
+            </footer>
+            </div>
+    </section>
+
+    
+
+</body>
+
+<script>
+    function downloadFile() {
+        const link = document.createElement('a');
+        link.href = './projects/FlickFinder.zip';
+        link.download = 'FlickFinder.zip';
+        link.click();
+    }
+    </script>
+
+<script>
+    document.getElementById('open-pdf-button').addEventListener('click', function() {
+    window.open('/assets/Richnow Resume.2024.pdf', '_blank');
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
